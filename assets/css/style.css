@@ -13,10 +13,9 @@ header, section  {
 	margin: 5px 0 5px 0;
 }
 
-#presentFourFighters {
+#fighterImg {
 	width: 180px;
 	height: 198px;
 	margin: 5px;
-	display: inline;
 }
 
