@@ -16,7 +16,7 @@ header, section  {
 #presentFourFighters {
 	width: 180px;
 	height: 198px;
-	display: flex;
-    justify-content:space-between;
+	margin: 5px;
+	display: inline;
 }
 

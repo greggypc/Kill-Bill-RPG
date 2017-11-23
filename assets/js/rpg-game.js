@@ -38,11 +38,15 @@ $(document).ready(function() {
 	//Initialize Game
 	//========================================
 	function layoutGame() {
-		$("#presentFourFighters").html('<img src="../week-4-rpg-game/assets/images/kill-beatrix-kiddo.jpg" />');
-		$("#presentFourFighters").append('<img src="../week-4-rpg-game/assets/images/kill-elle-driver.jpg" />');
-		$("#presentFourFighters").append('<img src="../week-4-rpg-game/assets/images/kill-o-ren-ishii.jpg" />');
-		$("#presentFourFighters").append('<img src="../week-4-rpg-game/assets/images/kill-vernita-green.jpg" />');
+		$("#presentFourFighters").html('<img id="presentFourFighters" src="../week-4-rpg-game/assets/images/kill-beatrix-kiddo.jpg" />');
+		$("#presentFourFighters").append('<img id="presentFourFighters" src="../week-4-rpg-game/assets/images/kill-elle-driver.jpg" />');
+		$("#presentFourFighters").append('<img id="presentFourFighters" src="../week-4-rpg-game/assets/images/kill-o-ren-ishii.jpg" />');
+		$("#presentFourFighters").append('<img id="presentFourFighters" src="../week-4-rpg-game/assets/images/kill-vernita-green.jpg" />');
 	}
+
+	$("#buttAppendp").click(function() {
+    	$("p").append("<b>Appended text to ALL p's</b>");
+    });
 
 
 layoutGame();
