@@ -1,5 +1,6 @@
 // RPG Game
 
+//Those of you lucky enough to still have their lives, take them with you! However, leave the limbs you've lost. They belong to me now
 $(document).ready(function() {
 
 	
@@ -48,6 +49,7 @@ $(document).ready(function() {
 		$("#fighterImg2").html('<img value="characters.fighter[1]" id="fighterImg" src=' + fighterImg2 + ' />');
 		$("#fighterImg3").html('<img value="characters.fighter[2]" id="fighterImg" src=' + fighterImg3 + ' />');
 		$("#fighterImg4").html('<img value="characters.fighter[3]" id="fighterImg" src=' + fighterImg4 + ' />');
+		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR FIGHTER!</h2>');
 	}
 
 	$("#fighterImg1").click(function() {
@@ -56,11 +58,13 @@ $(document).ready(function() {
     		$(".playerName").html('<p>Beatrix Kiddo</p>');
     		$("#fighterImg1").hide();
     		role = "enemy";
+    		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg1 + ' />');
     		$(".enemyName").html('<p>Beatrix Kiddo</p>');
     		$("#fighterImg1").hide();
+    		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our enemy");
     	}
     });
@@ -71,6 +75,7 @@ $(document).ready(function() {
     		$(".playerName").html('<p>Elle Driver</p>');
     		$("#fighterImg2").hide();
     		role = "enemy";
+    		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg2 + ' />');
@@ -83,13 +88,14 @@ $(document).ready(function() {
     $("#fighterImg3").click(function() {
     	if (role === null) {
     		$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg3 + ' />');
-    		$(".playerName").html('<p>O Ren Ishii</p>');
+    		$(".playerName").html('<p>O-Ren Ishii</p>');
     		$("#fighterImg3").hide();
     		role = "enemy";
+    		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg3 + ' />');
-    		$(".enemyName").html('<p>O Ren Ishii</p>');
+    		$(".enemyName").html('<p>O-Ren Ishii</p>');
     		$("#fighterImg3").hide();
     		console.log("just picked our enemy");
     	}
@@ -97,18 +103,34 @@ $(document).ready(function() {
 
     $("#fighterImg4").click(function() {
     	if (role === null) {
-    		$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
-    		$(".playerName").html('<p>Vernita Green</p>');
-    		$("#fighterImg4").hide();
+    	$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
+        $(".playerName").html('<p>Vernita Green</p>');
+        $("#fighterImg4").hide();	
+        $("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		role = "enemy";
+    		//pickedPlayer();
     		console.log("just picked our player");
     	} else {
-    		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
-    		$(".enemyName").html('<p>Vernita Green</p>');
-    		$("#fighterImg4").hide();
+    	  $("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
+      	  $(".enemyName").html('<p>Vernita Green</p>');
+      	  $("#fighterImg4").hide();
+    		//pickedOpponent();
     		console.log("just picked our enemy");
     	}
     });
+
+    // function pickedPlayer() {
+    //   $("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
+    //   $(".playerName").html('<p>Vernita Green</p>');
+    //   $("#fighterImg4").hide();	
+    //   $("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
+    // };
+
+    // function pickedOpponent() {
+    //   $("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
+    //   $(".enemyName").html('<p>Vernita Green</p>');
+    //   $("#fighterImg4").hide();	
+    // };
 
 
 layoutGame();

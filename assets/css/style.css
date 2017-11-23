@@ -1,14 +1,42 @@
 /*Week 4 RPG Game CSS*/
 
+
+html, body{
+  height: 100%;
+}
 body { 
-  	background: #777;
-	font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+			background-image: url(../images/kill_bill_black_edition.jpg) ;
+			/*background-image: url(../images/pr9r5Xk.png) ;*/
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+			font-family: 'Oswald', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+	color: #fff;
 	font-size: 18px;
 	text-align: center;
+  
+}
+
+h1 {
+	font-size: 46px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 38px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 28px;
+	/*font-weight: bold;*/
 }
 
 header, section  {
-	background-color: #e9e9e9;
+	/*background-color:rgba(0, 0, 0, 0.4);*/
+
 	padding: 10px;
 	margin: 5px 0 5px 0;
 }
