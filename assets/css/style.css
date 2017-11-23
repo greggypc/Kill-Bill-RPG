@@ -13,3 +13,10 @@ header, section  {
 	margin: 5px 0 5px 0;
 }
 
+#presentFourFighters {
+	width: 180px;
+	height: 198px;
+	display: flex;
+    justify-content:space-between;
+}
+
