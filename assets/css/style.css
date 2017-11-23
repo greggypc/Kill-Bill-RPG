@@ -1,26 +1,15 @@
+/*Week 4 RPG Game CSS*/
 
-
-html { 
-  background: url(../images/kill_bill_black_edition.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+body { 
+  	background: #777;
+	font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-size: 18px;
+	text-align: center;
 }
 
-/*body {
-	height: 100%
-	
+header, section  {
+	background-color: #e9e9e9;
+	padding: 10px;
+	margin: 5px 0 5px 0;
 }
 
-.bg { 
-    /* The image used */
-    background-image: url("../images/UkIGHlJ.gif");
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
