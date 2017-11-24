@@ -1,6 +1,9 @@
 // RPG Game
 
 //Those of you lucky enough to still have their lives, take them with you! However, leave the limbs you've lost. They belong to me now
+//We have unfinished business.
+
+
 $(document).ready(function() {
 
 	
@@ -66,6 +69,8 @@ $(document).ready(function() {
     		$("#fighterImg1").hide();
     		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our enemy");
+    		attack();
+    		
     	}
     });
 
@@ -82,6 +87,8 @@ $(document).ready(function() {
     		$(".enemyName").html('<p>Elle Driver</p>');
     		$("#fighterImg2").hide();
     		console.log("just picked our enemy");
+    		attack();
+    		
     	}
     });
 
@@ -98,6 +105,8 @@ $(document).ready(function() {
     		$(".enemyName").html('<p>O-Ren Ishii</p>');
     		$("#fighterImg3").hide();
     		console.log("just picked our enemy");
+    		attack();
+    		
     	}
     });
 
@@ -114,11 +123,16 @@ $(document).ready(function() {
     	  $("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
       	  $(".enemyName").html('<p>Vernita Green</p>');
       	  $("#fighterImg4").hide();
+      	  console.log("just picked our enemy");
+      	  attack();
     		//pickedOpponent();
-    		console.log("just picked our enemy");
+    		
     	}
     });
 
+    function attack() {
+    	console.log("battle begins");
+    }
     // function pickedPlayer() {
     //   $("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
     //   $(".playerName").html('<p>Vernita Green</p>');
