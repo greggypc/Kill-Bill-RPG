@@ -41,9 +41,32 @@ header, section  {
 	margin: 5px 0 5px 0;
 }
 
+/*div {
+	margin: 0 auto;
+}*/
+
+.slashImg {
+	width: 30px;
+	height: 150px;
+}
+
+#buttonAttack {
+	width: 100px;
+	height: 40px;
+	background-color: red;
+	color: yellow;
+}
+
 #fighterImg {
 	width: 180px;
 	height: 198px;
 	margin: 5px;
+}
+
+#playerChosen, #enemyChosen {
+	width: 200px;
+	height: 225px;
+	
+	border: 3px solid yellow;
 }
 
