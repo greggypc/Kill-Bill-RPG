@@ -51,6 +51,10 @@ $(document).ready(function() {
 	//Initialize Game
 	//========================================
 	function layoutGame() {
+		// Sound effect
+            var audioElement = document.createElement("audio");
+            audioElement.setAttribute("src", "assets/audio/kill_bill_trimmed.mp3");
+            audioElement.play();
 		$("#fighterImg1").html('<img value="characters.fighter[0]" id="fighterImg" src=' + fighterImg1 + ' />');
 		$("#fighterImg2").html('<img value="characters.fighter[1]" id="fighterImg" src=' + fighterImg2 + ' />');
 		$("#fighterImg3").html('<img value="characters.fighter[2]" id="fighterImg" src=' + fighterImg3 + ' />');
@@ -136,6 +140,12 @@ $(document).ready(function() {
     function attack() {
     	console.log("battle begins");
     	$("#choosePlayerThenOpponent").html('<h2>THE BATTLE BEGINS! CLICK ATTACK!</h2>');
+    	$("#buttonAttack").click(function() {
+    		// Sound effect
+            var audioElement = document.createElement("audio");
+            audioElement.setAttribute("src", "assets/audio/sword-slash-trimmed.mp3");
+            audioElement.play();
+    	});
     }
     // function pickedPlayer() {
     //   $("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');

@@ -21,7 +21,8 @@ body {
 
 h1 {
 	font-size: 46px;
-	font-weight: bold;
+	font-weight: bolder;
+	
 }
 
 h2 {
@@ -48,18 +49,20 @@ header, section  {
 }
 #killBill {
 	/*text-shadow: 2px 2px #E11226;*/
-	letter-spacing: -1.5px;
+	letter-spacing: -1px;
+	transform: scale(1.1, 1);
+	font-weight: 900;
 }
 
 .viperRed {
 	color: #E11226;
 	padding: 8px;
+	font-weight: 900;
 
 }
 
 #warriorText {
-	letter-spacing: .2px;
-	line-height: 24px;
+	line-height: 20px;
 }
 /*div {
 	margin: 0 auto;
