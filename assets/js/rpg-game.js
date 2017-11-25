@@ -26,17 +26,20 @@ $(document).ready(function() {
         name: "Elle Driver",
         healthPoints: 133,
         attackPower: 3,
-        counterAttackPower: 9
+        counterAttackPower: 9,
+        role: "enemy"
       }, {
       	name: "O Ren Ishi",
         healthPoints: 139,
         attackPower: 4,
-        counterAttackPower: 11
+        counterAttackPower: 11,
+        role: "enemy"
       }, {
       	name: "Vernita Green",
         healthPoints: 135,
         attackPower: 3,
-        counterAttackPower: 7
+        counterAttackPower: 7,
+        role: "enemy"
       }]
     };
     var role =  null;
@@ -59,14 +62,14 @@ $(document).ready(function() {
     	if (role === null) {
     		$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg1 + ' />');
     		$(".playerName").html('<p>Beatrix Kiddo</p>');
-    		$("#fighterImg1").hide();
+    		$("#fighterImg1").fadeTo(500,0.4);
     		role = "enemy";
     		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg1 + ' />');
     		$(".enemyName").html('<p>Beatrix Kiddo</p>');
-    		$("#fighterImg1").hide();
+    		$("#fighterImg1").fadeTo(500,0.4);
     		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our enemy");
     		attack();
@@ -78,14 +81,14 @@ $(document).ready(function() {
     	if (role === null) {
     		$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg2 + ' />');
     		$(".playerName").html('<p>Elle Driver</p>');
-    		$("#fighterImg2").hide();
+    		$("#fighterImg2").fadeTo(500,0.4);
     		role = "enemy";
     		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg2 + ' />');
     		$(".enemyName").html('<p>Elle Driver</p>');
-    		$("#fighterImg2").hide();
+    		$("#fighterImg2").fadeTo(500,0.4);
     		console.log("just picked our enemy");
     		attack();
     		
@@ -96,14 +99,14 @@ $(document).ready(function() {
     	if (role === null) {
     		$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg3 + ' />');
     		$(".playerName").html('<p>O-Ren Ishii</p>');
-    		$("#fighterImg3").hide();
+    		$("#fighterImg3").fadeTo(500,0.4);
     		role = "enemy";
     		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg3 + ' />');
     		$(".enemyName").html('<p>O-Ren Ishii</p>');
-    		$("#fighterImg3").hide();
+    		$("#fighterImg3").fadeTo(500,0.4);
     		console.log("just picked our enemy");
     		attack();
     		
@@ -114,7 +117,7 @@ $(document).ready(function() {
     	if (role === null) {
     	$("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
         $(".playerName").html('<p>Vernita Green</p>');
-        $("#fighterImg4").hide();	
+        $("#fighterImg4").fadeTo(500,0.4);
         $("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		role = "enemy";
     		//pickedPlayer();
@@ -122,7 +125,7 @@ $(document).ready(function() {
     	} else {
     	  $("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
       	  $(".enemyName").html('<p>Vernita Green</p>');
-      	  $("#fighterImg4").hide();
+      	  $("#fighterImg4").fadeTo(500,0.4);
       	  console.log("just picked our enemy");
       	  attack();
     		//pickedOpponent();
@@ -132,6 +135,7 @@ $(document).ready(function() {
 
     function attack() {
     	console.log("battle begins");
+    	$("#choosePlayerThenOpponent").html('<h2>THE BATTLE BEGINS! CLICK ATTACK!</h2>');
     }
     // function pickedPlayer() {
     //   $("#playerChosen").html('<img id="fighterImg" src=' + fighterImg4 + ' />');
