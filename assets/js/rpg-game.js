@@ -1,6 +1,6 @@
 // RPG Game
 
-//Those of you lucky enough to still have their lives, take them with you! However, leave the limbs you've lost. They belong to me now
+//Those of you lucky enough to still have their lives, take them with you! However, leave the limbs you've lost. They belong to me now.
 //We have unfinished business.
 
 
@@ -19,37 +19,65 @@ $(document).ready(function() {
 	//========================================
 	//may need to add 'type' of defender or opponent
 	var characters = {
-        fighter: [{
+        beatrix: {
         name: "Beatrix Kiddo",
         healthPoints: 129,
         attackPower: 4,
         counterAttackPower: 7,
-        role: "enemy"
-      }, {
+        imageURL: "../images/kill-beatrix-kiddo.jpg",
+        role: "player"
+      }, 
+        elle: {
         name: "Elle Driver",
         healthPoints: 133,
         attackPower: 3,
         counterAttackPower: 9,
-        role: "enemy"
-      }, {
+        imageURL: "../images/kill-elle-driver.jpg",
+        role: "player"
+      }, 
+        oren: {
       	name: "O Ren Ishi",
         healthPoints: 139,
         attackPower: 4,
         counterAttackPower: 11,
-        role: "enemy"
-      }, {
+        imageURL: "../images/kill-o-ren-ishii.jpg",
+        role: "player"
+      }, 
+        vernita: {
       	name: "Vernita Green",
         healthPoints: 135,
         attackPower: 3,
         counterAttackPower: 7,
-        role: "enemy"
-      }]
+         imageURL: "../images/kill-vernita-green.jpg",
+        role: "player"
+      }
     };
-    var role =  null;
-    var fighterImg1 = "../week-4-rpg-game/assets/images/kill-beatrix-kiddo.jpg";
-    var fighterImg2 = "../week-4-rpg-game/assets/images/kill-elle-driver.jpg";
-    var fighterImg3 = "../week-4-rpg-game/assets/images/kill-o-ren-ishii.jpg";
-    var fighterImg4 = "../week-4-rpg-game/assets/images/kill-vernita-green.jpg";
+
+    // var demoCharacter = {
+    //     "Beatrix Kiddo": {
+    //         name: "Beatrix Kiddo",
+    //         healthPoints: 129,
+    //         attackPower: 4,
+    //         counterAttackPower: 7,
+    //         role: "player",
+    //         fighterImg1 = "../week-4-rpg-game/assets/images/kill-beatrix-kiddo.jpg"  
+    //     },
+    //     "Elle Driver": {
+    //         name: "Elle Driver",
+    //         healthPoints: 133,
+    //         attackPower: 3,
+    //         counterAttackPower: 9,
+    //         role: "player"
+    //         fighterImg2 = "../week-4-rpg-game/assets/images/kill-elle-driver.jpg"
+    //     },
+       
+    // };
+
+    var role = null;
+    var fighterImg1 = "assets/images/kill-beatrix-kiddo.jpg";
+    var fighterImg2 = "assets/images/kill-elle-driver.jpg";
+    var fighterImg3 = "assets/images/kill-o-ren-ishii.jpg";
+    var fighterImg4 = "assets/images/kill-vernita-green.jpg";
 
 	//Initialize Game
 	//========================================
@@ -60,6 +88,9 @@ $(document).ready(function() {
 		$("#fighterImg3").html('<img value="characters.fighter[2]" id="fighterImg" src=' + fighterImg3 + ' />');
 		$("#fighterImg4").html('<img value="characters.fighter[3]" id="fighterImg" src=' + fighterImg4 + ' />');
 		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR FIGHTER!</h2>');
+		console.log(characters.fighter[0].name);
+		console.log(characters.fighter[1].name);
+		console.log(characters.fighter[2].role);
 	}
 
 	$("#fighterImg1").click(function() {
@@ -70,6 +101,9 @@ $(document).ready(function() {
     		role = "enemy";
     		$("#choosePlayerThenOpponent").html('<h2>SELECT YOUR OPPONENT!</h2>');
     		console.log("just picked our player");
+    		console.log(characters.fighter[0].name);
+    		//playersToBattle.push() ;
+		
     	} else {
     		$("#enemyChosen").html('<img id="fighterImg" src=' + fighterImg1 + ' />');
     		$(".enemyName").html('<p>Beatrix Kiddo</p>');
@@ -94,6 +128,8 @@ $(document).ready(function() {
     		$(".enemyName").html('<p>Elle Driver</p>');
     		$("#fighterImg2").fadeTo(500,0.4);
     		console.log("just picked our enemy");
+    		console.log(characters.fighter[1].name);
+		
     		attack();
     		
     	}
